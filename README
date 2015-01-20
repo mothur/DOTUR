@@ -1,0 +1,83 @@
+// 
+// DOTUR: A program for calculating discriptive statistics for sequence libraries.
+// Version 1.3, released on March 3, 2005
+// Copyright (C) 2005 Patrick D. Schloss 
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+//
+// This distribution contains the following files.
+//
+//   COPYING --- the GNU General Public Licence
+//   README --- this file
+//   dotur.C, otu.h, richness.h --- the source code
+//
+// INSTALLATION
+//
+// Linux users with GNU gcc can compile the program by typing:
+//
+//   g++ dotur.C -O4 -o dotur
+//
+// at the prompt.
+//
+// RUNNING THE PROGRAM
+//	  See the manual available online.
+//
+// VERSION HISTORY
+//
+// Version 1.0
+//    Released May 25, 2004
+// Version 1.1
+// 	  Released July 19, 2004
+//	  	Fixed bug in shannon index files
+//		expanded number of values to the right of the decimal point from 2 to 4
+// Version 1.2
+// 	  Released August 23, 2004
+//		Fixed bug in calculating variance of shannon index
+//		Give user the flexibility to set the number of iterations to run
+//		Reverted to presenting the mean instead of 50%tile for rarefaction curve
+//		Fixed a small bug that had rarefaction curves going through (1,0) instead of (1,1)
+//		Changed *.r_rarefaction filename to *.rarefaction
+//		Changed *.r_*.ltt to *.ltt filenames (eg. *r_chao.ltt is now *.chao.ltt)
+//		Wrote first version of user manual
+// Version 1.3
+//	  Released March 3, 2005
+//		Final release before publication of paper in March 2005 issue of AEM
+//		Fixed libraries dependency error that caused compilation problems on some platforms
+//		Fixed core dump error received by some users
+//		Fixed bugs in reporting Shannon & Simpson Indices
+//		Changed number of places to report right of the decimal point for output files
+//		Streamlined terminal output
+//		Added user control of whether to calculate rarefaction curve for ecological parameters
+//			(still calcuates traditional rarefaction curve) - makes execution much faster
+//		Fixed some problems and updated parts of user manual
+// Version 1.4
+//	  Released March 8, 2005
+//		Fixed bug in calculating the confidence interval for the Chao1 estimator
+// Version 1.5
+//	  Released April 19, 2005
+//		Added 95% CI for ACE richness estimator
+//		Updated bias-corrected Chao1 richness estimator and standard error formulae according to Colwell and Chao
+//		Allow user to set largest distance to consider (-stop)
+//		Allow user to construct a rarefaction curve obtained by sampling with replacement (-wrep)
+//		Fixed a problem in constructing collector's curves caused by sequence names that are a fragment of another name
+// Version 1.51
+//	  Released April 22, 2005
+//		Support mega3 formatted distance files as input
+// Version 1.53
+//	  Released November XX, 2005
+//		Allow user to "jumble" the order of sequences in the distance matrix (use -jumble)
+//		Allow the user to input a similarity matrix, although correction is still recommended (use -sim)
+//		Modified data types in otu.h making the clustering procedure use less memory and faster
+//		DOTUR now produces a file containing data to construct rank-abundance plots	
