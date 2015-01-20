@@ -1,8 +1,6 @@
 //
 //
 
-using namespace std;
-
 #include "otu.h"
 #include "richness.h"
 #include <iostream>
@@ -13,6 +11,8 @@ using namespace std;
 #include <sstream>
 #include <list>
 #include <ctime>
+
+using namespace std;
 
 /**************************************************************************************************/
 

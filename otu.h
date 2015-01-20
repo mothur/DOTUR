@@ -1,4 +1,6 @@
 #include <iostream>
+using namespace std;
+
 #include <fstream>
 #include <iomanip>
 #include <vector>
@@ -416,6 +418,8 @@ int DistanceMatrix::print_nonred_w(string otu, string list, string index, int pr
 	otu_file.flush();
 	list_file.flush();
 	index_file.flush();
+	
+	return 0;
 }
 
 /**************************************************************************************************/

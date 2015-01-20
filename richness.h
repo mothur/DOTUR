@@ -1,3 +1,5 @@
+using namespace std;
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -562,7 +564,7 @@ void OTUMatrix::jackknife(vector<int>& l_freq, double& jack, double& ci)
 		}
 		ci = 1.96 * sqrt(ci - jack);
 	}
-	else if(k=1){
+	else if(k==1){
 		jack = N[1];
 		ci = 1.96*sqrt(variance[1]);
 	}else{
