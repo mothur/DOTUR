@@ -1,4 +1,3 @@
-// 
 // DOTUR: A program for calculating discriptive statistics for sequence libraries.
 // Version 1.3, released on March 3, 2005
 // Copyright (C) 2005 Patrick D. Schloss 
@@ -19,7 +18,7 @@
 //
 // This distribution contains the following files.
 //
-//   COPYING --- the GNU General Public Licence
+//   LICENSE --- the GNU General Public License
 //   README --- this file
 //   dotur.C, otu.h, richness.h --- the source code
 //
